@@ -16,6 +16,7 @@ app.get('/', function (req, res, next) {
 	 	 	next(err)
 	 	 	return;
 	 	 }
+	 	 console.log('and here')
 	 });
 });
 
