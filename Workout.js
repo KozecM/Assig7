@@ -15,11 +15,11 @@ app.get('/', function (req, res, next) {
 	 	 if (err) {
 	 	 	next(err);
 	 	 	return;
-	 	 }
-	 	 console.log('and here');
-	 });
-	 context.results = JSON.stringify(rows);
-	 res.render('home',context);
+	 	}
+	 	console.log('and here');
+	 	context.results = JSON.stringify(rows);
+	 	res.render('home',context);
+	});
 });
 
 app.get('/reset-table',function(req,res,next){
