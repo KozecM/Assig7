@@ -24,8 +24,6 @@ app.post('/', function (req, res, next) {
 	var context = {}; 
 
 	console.log("req="+JSON.stringify(res));
-
-	//if(req.body['add session']){
 		console.log('here');
 		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES('chuck', '3', '80', '2016-05-28', 1)";
 		mysql.pool.query(sql, function (err,result){
@@ -38,7 +36,6 @@ app.post('/', function (req, res, next) {
 			 console.log('result=' + result);
 			 res.render('worksql',context);
 		});
-	//}
 });
 
 function deleteRow(TableID, curRow){

@@ -1,7 +1,7 @@
 <h1>Your Workout Schedual</h1>
 <h2>You have completed {{workoutnum}} exercizes.</h2>
 
-<form method="post">
+<div id="form_post">
 	<label>Name:
 		<input type="text" name="name" id="Name">
 	</label>
@@ -22,8 +22,8 @@
 		<input type="boolean" name="lbs" id="Lbs/Kg">
 	</label>
 	
-	<input type="submit" name="add session" value="Add Session">
-</form>
+	<button onclick="wo.insert();">Add Session</button>
+</div>
 
 {{#if workout}}
 <table id="worktable">
@@ -41,7 +41,7 @@
 		<td>{{this.weight}}</td>
 		<td>{{this.date}}</td>
 		<td>{{this.lbs}}</td>
-		<input type="button" value="delete" onclick="deleteRow('worktable',this)"/>
+		<input type="button" value="Delete" onclick="deleteRow('worktable',this)"/>
 	</tr>
 	{{/each}}
 </ul>
