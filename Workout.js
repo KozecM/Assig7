@@ -11,12 +11,10 @@ app.set('port', 3000);
 app.get('/', function (req, res, next) {
 	 var context = {};
 	 mysql.pool.query('SELECT * FROM workouts', function (err,rows,fields) {
-	 	console.log('here');
 	 	 if (err) {
 	 	 	next(err);
 	 	 	return;
 	 	}
-	 	console.log('and here');
 	 	context.results = JSON.stringify(rows);
 	 	res.render('worksql',context);
 	});
@@ -26,6 +24,7 @@ app.post('/', function (req, res) {
 	var context = {}; 
 
 	if(req.body['add session']){
+		console.log('here')
 		mysql.pool.query("INSERT INTO workouts (name, reps, weight, date, lbs) VALUES(?)", [req.query.id], function (err,result){
 			 if(err){
 			 	next(err);
