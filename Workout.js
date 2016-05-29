@@ -18,9 +18,36 @@ app.get('/', function (req, res, next) {
 	 	}
 	 	console.log('and here');
 	 	context.results = JSON.stringify(rows);
-	 	res.render('home',context);
+	 	res.render('worksql',context);
 	});
 });
+
+app.post('/', function (req, res) {
+	var context = {}; 
+
+	if(req.body['add session']){
+		mysql.pool.query("INSERT INTO workouts (name, reps, weight, date, lbs) VALUES(?)", [req.query.id], function (err,result){
+			 if(err){
+			 	next(err);
+			 	return;
+			 }
+			 console.log('result');
+			 res.render('worksql',context);
+		});
+	}
+});
+
+Function deleteRow(TableID, curRow){
+	var table = document.getElementById(tableID);
+	var rowCount - table.rows.length;
+	for (var i = 0; i<rowCount; i++){
+		if (row == curRow.parentNode.parentNode){
+			table.deleteRow(i);
+			rowCount--;
+			i--;
+		}
+	}
+}
 
 app.get('/reset-table',function(req,res,next){
   var context = {};
