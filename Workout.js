@@ -25,7 +25,8 @@ app.post('/', function (req, res, next) {
 
 	//if(req.body['add session']){
 		console.log('here')
-		mysql.pool.query("INSERT INTO workouts (`id`,`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?)", [req.query.id], function (err,result){
+		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES('chuck', '3', '80', '2016-05-28', 1)";
+		mysql.pool.query(sql, function (err,result){
 			 if(err){
 			 	console.log('bummer')
 			 	next(err);
