@@ -2,7 +2,7 @@
 function Workout() {
 
 	this.insert = function(){
-		console.log("inserting data");
+		alert("hi");
 	}
 }
 
