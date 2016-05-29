@@ -37,7 +37,7 @@ app.post('/', function (req, res) {
 	}
 });
 
-Function deleteRow(TableID, curRow){
+function deleteRow(TableID, curRow){
 	var table = document.getElementById(tableID);
 	var rowCount - table.rows.length;
 	for (var i = 0; i<rowCount; i++){
