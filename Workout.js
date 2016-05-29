@@ -39,7 +39,7 @@ app.post('/', function (req, res) {
 
 function deleteRow(TableID, curRow){
 	var table = document.getElementById(tableID);
-	var rowCount - table.rows.length;
+	var rowCount = table.rows.length;
 	for (var i = 0; i<rowCount; i++){
 		if (row == curRow.parentNode.parentNode){
 			table.deleteRow(i);
