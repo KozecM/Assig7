@@ -23,17 +23,19 @@ app.get('/', function (req, res, next) {
 app.post('/', function (req, res, next) {
 	var context = {}; 
 
+	console.log("req="+JSON.stringify(req));
+
 	//if(req.body['add session']){
-		console.log('here')
+		console.log('here');
 		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES('chuck', '3', '80', '2016-05-28', 1)";
 		mysql.pool.query(sql, function (err,result){
 			 if(err){
-			 	console.log('bummer')
+			 	console.log('bummer');
 			 	next(err);
 			 	return;
 			 }
-			 context.workout = JSON.parse(result);
-			 console.log('result');
+			 //context.workout = JSON.parse(result);
+			 console.log('result=' + result);
 			 res.render('worksql',context);
 		});
 	//}
