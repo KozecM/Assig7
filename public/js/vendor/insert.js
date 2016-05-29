@@ -2,7 +2,7 @@
 function Workout() {
 
 	this.insert = function(){
-		var woContent = document.getElementsById("Name").value;
+		var woContent = document.getElementById("Name").value;
 		console.log(woContent);
 	}
 }
