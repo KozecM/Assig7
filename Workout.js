@@ -23,7 +23,7 @@ app.get('/', function (req, res, next) {
 app.post('/', function (req, res) {
 	var context = {}; 
 
-	if(req.body['add session']){
+	//if(req.body['add session']){
 		console.log('here')
 		mysql.pool.query("INSERT INTO workouts (name, reps, weight, date, lbs) VALUES(?)", [req.query.id], function (err,result){
 			 if(err){
@@ -33,7 +33,7 @@ app.post('/', function (req, res) {
 			 console.log('result');
 			 res.render('worksql',context);
 		});
-	}
+	//}
 });
 
 function deleteRow(TableID, curRow){
