@@ -3,7 +3,7 @@ function Workout() {
 
 	console.log("here");
 	this.insert = function(){
-		var woContent = getElementById(form_post);
+		var woContent = document.getElementById(form_post);
 		console.log(woContent);
 	}
 }
