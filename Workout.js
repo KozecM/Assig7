@@ -23,7 +23,7 @@ app.get('/', function (req, res, next) {
 app.post('/', function (req, res, next) {
 	var context = {}; 
 
-	console.log("req="+JSON.stringify(req));
+	console.log("req="+JSON.stringify(res));
 
 	//if(req.body['add session']){
 		console.log('here');
