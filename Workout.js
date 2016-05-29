@@ -3,6 +3,7 @@ var mysql = require('./dbcon.js');
 
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout: 'main'});
+var path = require('path');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
