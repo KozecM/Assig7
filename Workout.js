@@ -25,7 +25,7 @@ app.post('/', function (req, res, next) {
 
 	//if(req.body['add session']){
 		console.log('here')
-		mysql.pool.query("INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?)", [req.query.id], function (err,result){
+		mysql.pool.query("INSERT INTO workouts (`id`,`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?)", [req.query.id], function (err,result){
 			 if(err){
 			 	console.log('bummer')
 			 	next(err);
