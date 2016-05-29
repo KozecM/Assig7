@@ -2,7 +2,8 @@
 function Workout() {
 
 	this.insert = function(){
-		alert("hi");
+		var woContent = getElementById(form_post);
+		console.log(woContent);
 	}
 }
 
