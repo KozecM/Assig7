@@ -29,7 +29,7 @@ app.post('/', function (req, res, next) {
 	//console.log("req="+JSON.stringify(res));
 		console.log('here');
 		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?, ?, ?, ?, ?)";
-		mysql.pool.query(sql, function (err,result){
+		mysql.pool.query(sql,[req.query.woName, req.query.reps, req.query.weight, req.query.date, req.query.lbs], function (err,result){
 			 if(err){
 			 	console.log('bummer');
 			 	next(err);
