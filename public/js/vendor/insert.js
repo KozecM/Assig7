@@ -9,6 +9,7 @@ function Workout() {
 		woContent += ", " +document.getElementById("Lbs/Kg").value;
 
 		console.log(woContent);
+		
 	}
 }
 

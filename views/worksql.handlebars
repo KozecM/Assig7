@@ -1,7 +1,8 @@
 <h1>Your Workout Schedual</h1>
 <h2>You have completed {{workoutnum}} exercizes.</h2>
 
-<div id="form_post">
+<!--<div id="form_post">-->
+<form method="post">
 	<label>Name:
 		<input type="text" name="woName" id="Name">
 	</label>
@@ -23,7 +24,8 @@
 	</label>
 	
 	<button onclick="wo.insert();">Add Session</button>
-</div>
+</form>
+<!--</div>-->
 
 {{#if workout}}
 <table id="worktable">
@@ -36,6 +38,7 @@
 	</tr>
 	{{#each workout}}
 	<tr>
+		<td hidden>{{this.id}}</td>
 		<td>{{this.name}}</td>
 		<td>{{this.reps}}</td>
 		<td>{{this.weight}}</td>
