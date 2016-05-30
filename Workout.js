@@ -26,7 +26,7 @@ app.get('/', function (req, res, next) {
 app.post('/', function (req, res, next) {
 	var context = {}; 
 
-	console.log("req="+JSON.stringify(res));
+	//console.log("req="+JSON.stringify(res));
 		console.log('here');
 		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?, ?, ?, ?, ?)";
 		mysql.pool.query(sql, function (err,result){
