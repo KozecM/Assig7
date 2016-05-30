@@ -23,7 +23,7 @@ app.get('/', function (req, res, next) {
 	});
 });
 
-app.post('/insert', function (req, res, next) {
+app.get('/insert', function (req, res, next) {
 	var context = {}; 
 
 	//console.log("req="+JSON.stringify(res));
