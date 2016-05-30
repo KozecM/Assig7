@@ -35,8 +35,9 @@ app.get('/insert', function (req, res, next) {
 			 	next(err);
 			 	return;
 			 }
-			 //context.workout = JSON.parse(result);
-			 console.log('result=' + result);
+			 context.workout = JSON.parse(result);
+			 var output = JSON.stringify(result);
+			 console.log('result=' + output);
 			 res.render('worksql',context);
 		});
 });
