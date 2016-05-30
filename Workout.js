@@ -23,11 +23,11 @@ app.get('/', function (req, res, next) {
 	});
 });
 
-app.post('/', function (req, res, next) {
+app.post('/insert', function (req, res, next) {
 	var context = {}; 
 
 	//console.log("req="+JSON.stringify(res));
-		console.log(req.query.woName);
+		console.log(req.query.);
 		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?, ?, ?, ?, ?)";
 		mysql.pool.query(sql,[req.query.woName, req.query.reps, req.query.weight, req.query.date, req.query.lbs], function (err,result){
 			 if(err){
