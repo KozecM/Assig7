@@ -54,7 +54,7 @@ app.get('/delete', function(req,res,next){
 		 	next(err);
 		 	return;
 		 }
-		 sql = "'SELECT * FROM workouts'"\
+		 sql = "SELECT * FROM workouts"
 		 mysql.pool.query(sql, function (err, rows, fields) {
 		 	if (err) {
 		 		next(err);
