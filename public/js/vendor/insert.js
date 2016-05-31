@@ -15,6 +15,8 @@ woContent.addEventListener("submit", function (e){
 						"&date="+woContent.elements.Date.value+
 						"&lbs="+woContent.elements.Lbs.value+
 
+	console.log(woParams);
+
 	req.open("GET", '/insert' + "?" +woParams, true);
 	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	req.addEventListener('load', function () {
