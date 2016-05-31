@@ -34,7 +34,7 @@ app.get('/insert', function (req, res, next) {
 			 	next(err);
 			 	return;
 			 }
-			 console.log(result);
+			 context.workout = result.insertId; 
 			 //var output = JSON.stringify(result);
 			 //console.log('result=' + output);
 			 res.render('worksql',context);
