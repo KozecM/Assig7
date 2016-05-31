@@ -27,8 +27,10 @@
 	</fieldset>
 </form>
 
+{{#if workout}}
 <table id="worktable">
 	<tr>
+		<th hidden>Id</th>
 		<th>Name</th>
 		<th>Reps</th>
 		<th>Weight</th>
@@ -43,7 +45,10 @@
 		<td>{{this.weight}}</td>
 		<td>{{this.date}}</td>
 		<td>{{this.lbs}}</td>
-		<input type="button" value="Delete" onclick="deleteRow('worktable',this)"/>
+		<input type="button" name="Update" onclick="UpdateRow('worktable',this)">
+		<input type="button" value="Delete" 
+		onclick="deleteRow('worktable',this)"/>
 	</tr>
 	{{/each}}
 </ul>
+{{/if}}

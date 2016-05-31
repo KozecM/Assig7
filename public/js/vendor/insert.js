@@ -32,3 +32,15 @@ woContent.addEventListener("submit", function (e){
 	});
 	req.send('/insert' + "?"+ woParams);
 });
+
+function deleteRow(TableID, curRow){
+	var table = document.getElementById(tableID);
+	var rowCount = table.rows.length;
+	for (var i = 0; i<rowCount; i++){
+		if (row == curRow.parentNode.parentNode){
+			table.deleteRow(i);
+			rowCount--;
+			i--;
+		}
+	}
+}

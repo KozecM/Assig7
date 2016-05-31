@@ -45,18 +45,6 @@ app.get('/insert', function (req, res, next) {
 		});
 });
 
-function deleteRow(TableID, curRow){
-	var table = document.getElementById(tableID);
-	var rowCount = table.rows.length;
-	for (var i = 0; i<rowCount; i++){
-		if (row == curRow.parentNode.parentNode){
-			table.deleteRow(i);
-			rowCount--;
-			i--;
-		}
-	}
-}
-
 app.get('/reset-table',function(req,res,next){
   var context = {};
   mysql.pool.query("DROP TABLE IF EXISTS workouts", function(err){
