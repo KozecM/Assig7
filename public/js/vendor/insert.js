@@ -29,8 +29,8 @@ woContent.addEventListener("submit", function (e){
 	req.addEventListener('load', function () {
 		 if(req.status >= 200 && req.status < 400){
 		 	console.log('request sent sucessfully');
-		 	var response = JSON.stringify(req.responseText);
-		 	console.log("here" +response)
+		 	var response = req.response
+		 	console.log("here ", response)
 		 	var id = response.workouts;
 
 		 	ajaxTable.push(id, name, reps, weight, date, lbs);
