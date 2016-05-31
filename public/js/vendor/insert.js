@@ -29,7 +29,7 @@ woContent.addEventListener("submit", function (e){
 	req.addEventListener('load', function () {
 		 if(req.status >= 200 && req.status < 400){
 		 	console.log('request sent sucessfully');
-		 	var response = req.responseText;
+		 	var response = JSON.parse(req.responseText);
 		 	console.log("here" +req.responseText)
 		 	var id = response.workouts;
 
@@ -44,7 +44,7 @@ woContent.addEventListener("submit", function (e){
 	req.send('/insert' + "?"+ woParams);
 });
 
-function deleteRow(TableID, curRow, wID){
+function deleteRow(tableID, curRow, wID){
 	var table = document.getElementById(tableID);
 	var rows = table.rows.length;
 

@@ -23,7 +23,6 @@ app.get('/', function (req, res, next) {
 	 	for(var i in rows){
 	 		workTable.push(rows[i]);
 	 	}
-	 	//context.workout = workTable;
 	 	context.workoutnum = workTable.length;
 	 	context.workout= rows;
 	 	res.render('worksql',context);
