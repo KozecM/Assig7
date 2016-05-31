@@ -50,8 +50,8 @@ woContent.addEventListener("submit", function (e){
 
 		 	Cell[0].style.display = "none";
 
-		 	var updatebtn = '<input type="button" value="Update" onclick="updateRow('worktable',this,{{this.id}})">';
-		 	var deletebtn = '<input type="button" value="Delete" onclick="deleteRow('worktable',this,{{this.id}})"/>';
+		 	var updatebtn = '<input type="button" value="Update" onclick="updateRow(\x27worktable\x27,this,{{this.id}})">';
+		 	var deletebtn = '<input type="button" value="Delete" onclick="deleteRow(\x27worktable\x27,this,{{this.id}})"/>';
 
 		 	Cell.push(document.createElement('td'));
 		 	Cell[6].innerHTML = updatebtn;
