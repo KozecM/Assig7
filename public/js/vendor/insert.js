@@ -1,4 +1,4 @@
-var wocontent = document.getElementById(woNew)
+var wocontent = document.getElementById('woNew');
 
 wocontent.addEventListener("submit", function (e){
 	e.preventDefault();
