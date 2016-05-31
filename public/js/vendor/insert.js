@@ -21,7 +21,7 @@ woContent.addEventListener("submit", function (e){
 	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	req.addEventListener('load', function () {
 		 if(req.status >= 200 && req.status < 400){
-		 	console.log('request sent sucessfully');
+		 	console.log('request sent sucessfully'+ req.responseText);
 		 	var response = JSON.parse(req.responseText);
 		 	console.log(req.responseText)
 		 } 
