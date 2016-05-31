@@ -20,5 +20,10 @@ wocontent.addEventListener("submit", function (e){
 		 	var response = JSON.parse(req.responseText);
 		 	console.log(req.responseText)
 		 } 
-	})
-})
+
+		 else {
+		 	console.log("error happened");
+		 }
+	});
+	req.send(/insert+ "?"+ woParams);
+});
