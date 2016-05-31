@@ -45,11 +45,11 @@
 		<td>{{this.weight}}</td>
 		<td>{{this.date}}</td>
 		<td>{{this.lbs}}</td>
-		<td><input type="button" name="Update" onclick="updateRow('worktable',this,{{this.id}})"></td>
+		<td><input type="button" value="Update" onclick="updateRow('worktable',this,{{this.id}})"></td>
 		<td><input type="button" value="Delete" 
 		onclick="deleteRow('worktable',this,{{this.id}})"/></td>
 	</tr>
-	<form style="hidden">
+	<form hidden = "true">
 		<label>Name:
 			<input type="text" name="Name" id="Name">
 		</label>
