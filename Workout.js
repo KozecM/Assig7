@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3001);
+app.set('port', 3000);
 
 app.get('/', function (req, res, next) {
 	 var context = {};
