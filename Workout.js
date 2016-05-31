@@ -18,6 +18,12 @@ app.get('/', function (req, res, next) {
 	 	 	next(err);
 	 	 	return;
 	 	}
+	 	var workTable = [];
+
+	 	for(var i in rows){
+	 		workTable.push(rows[i]);
+	 	}
+	 	context.workout = workTable;
 	 	context.results = JSON.stringify(rows);
 	 	res.render('worksql',context);
 	})
