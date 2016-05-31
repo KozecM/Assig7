@@ -23,7 +23,7 @@ woContent.addEventListener("submit", function (e){
 		 if(req.status >= 200 && req.status < 400){
 		 	console.log('request sent sucessfully');
 		 	var response = req.responseText;
-		 	console.log(req.response)
+		 	console.log("here" +req.response)
 		 } 
 
 		 else {
