@@ -9,11 +9,11 @@ woContent.addEventListener("submit", function (e){
 
 	var req = new XMLHttpRequest();
 
-	var woParams ="Name"+woContent.elements.name.value+
-						"&reps="+woContent.elements.reps.value+
-						"&weight="+woContent.elements.weight.value+
-						"&date="+woContent.elements.date.value+
-						"&lbs="+woContent.elements.lbs.value+
+	var woParams ="Name"+woContent.elements.Name.value+
+						"&reps="+woContent.elements.Reps.value+
+						"&weight="+woContent.elements.Weight.value+
+						"&date="+woContent.elements.Date.value+
+						"&lbs="+woContent.elements.Lbs.value+
 
 
 	req.open("GET", '/insert' + "?" +woParams, true);
