@@ -1,9 +1,11 @@
-var woContent = document.getElementById('woNew');
+var woContent = document.getElementById("woNew");
 
 console.log(woContent)
 
 woContent.addEventListener("submit", function (e){
 	e.preventDefault();
+
+	console.log('here');
 
 	var req = new XMLHttpRequest();
 
