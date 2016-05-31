@@ -26,7 +26,6 @@ app.get('/', function (req, res, next) {
 app.get('/insert', function (req, res, next) {
 	var context = {}; 
 
-	//console.log("req="+JSON.stringify(res));
 		console.log(req.query.Name);
 		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?, ?, ?, ?, ?)";
 		mysql.pool.query(sql,[req.query.Name, req.query.reps, req.query.weight, req.query.date, req.query.lbs], function (err, row, result){
