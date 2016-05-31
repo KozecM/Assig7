@@ -30,7 +30,7 @@
 
 <table id="worktable">
 	<tr>
-		<th hidden>Id</th>
+		<th style = "display:none">Id</th>
 		<th>Name</th>
 		<th>Reps</th>
 		<th>Weight</th>
@@ -39,15 +39,50 @@
 	</tr>
 	{{#each workout}}
 	<tr>
-		<td hidden>{{this.id}}</td>
+		<td style = "display:none">{{this.id}}</td>
 		<td>{{this.name}}</td>
 		<td>{{this.reps}}</td>
 		<td>{{this.weight}}</td>
 		<td>{{this.date}}</td>
 		<td>{{this.lbs}}</td>
-		<input type="button" name="Update" onclick="UpdateRow('worktable',this)">
-		<input type="button" value="Delete" 
-		onclick="deleteRow('worktable',this)"/>
+		<td><input type="button" name="Update" onclick="updateRow('worktable',this,{{this.id}})"></td>
+		<td><input type="button" value="Delete" 
+		onclick="deleteRow('worktable',this,{{this.id}})"/></td>
 	</tr>
+	<form style="display:none">
+		<label>Name:
+			<input type="text" name="Name" id="Name">
+		</label>
+	
+		<label>Reps:
+			<input type="number" name="Reps" id="Reps">
+		</label>
+	
+		<label>Weight:
+			<input type="number" name="Weight" id="Weight">
+		</label>
+	
+		<label>Date
+			<input type="date" name="Date" id="Date">
+		</label>
+	
+		<label>Lbs:1, Kg:0
+			<input type="boolean" name="Lbs" id="Lbs">
+		</label>
+		<input type="Submit" name="Submit" value="Update">
+	</form>
 	{{/each}}
-</ul>
+</table>
+
+<table style = "display:none" id="ajxTbl">
+	<tr>
+		<th style = "display:none">Id</th>
+		<th>Name</th>
+		<th>Reps</th>
+		<th>Weight</th>
+		<th>Date</th>
+		<th>Lbs(1)/Kg(0)</th>
+	</tr>
+	
+
+</table>

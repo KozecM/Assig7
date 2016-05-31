@@ -45,6 +45,54 @@ app.get('/insert', function (req, res, next) {
 		});
 });
 
+app.get('/delete', function(req,res,next){
+	var context = {};
+
+	var sql = "DELETE FROM workouts WHERE id = ?"
+	mysql.pool.query(sql,[req.query.id], function (err, result) {
+		 if(err){
+		 	next(err);
+		 	return;
+		 }
+		 sql = "'SELECT * FROM workouts'"\
+		 mysql.pool.query(sql, function (err, rows, fields) {
+		 	if (err) {
+		 		next(err);
+		 		return;
+		 	}
+		 	context.workout = JSON.stringify(rows);
+		 	res.render('worksql', context);
+		 }); 
+	});
+});
+
+app.get('update', function (req, res, next) {
+	 var context {};
+
+	 var sql = "SELECT * FROM workouts WHere id=?"
+
+	 mysql.pool.query(sql,[req.query.id], function(err, result){
+	 	if(err){
+	 		next(err);
+	 		return;
+	 	}
+	 	if (result.length == 1) {
+	 		var curVals = result[0];
+	 		sql = "UPDATE workouts SET name=?, reps=?, weight=?, date=?, lbs=?"
+
+	 		mysql.pool.query(sql, [req.query.name || curVals.name, req.query.reps || curVals.reps, req.query.weight || curVals.weight, req.query.date || curVals.date, req.query.lbs || curVals.lbs],
+	 			function (err, result) {
+	 				 if (err) {
+	 				 	next(err);
+	 				 	return;
+	 				 }
+	 				 context.workout = JSON.stringify(result.changedRows);
+	 				 res.render('worksql', context);
+	 			})
+	 	}
+	 }) 
+})
+
 app.get('/reset-table',function(req,res,next){
   var context = {};
   mysql.pool.query("DROP TABLE IF EXISTS workouts", function(err){
