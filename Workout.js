@@ -25,8 +25,7 @@ app.get('/', function (req, res, next) {
 
 app.get('/insert', function (req, res, next) {
 	var context = {}; 
-
-		console.log(req.query.Name);
+	
 		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?, ?, ?, ?, ?)";
 		mysql.pool.query(sql,[req.query.name, req.query.reps, req.query.weight, req.query.date, req.query.lbs], function (err, result){
 			 if(err){
@@ -35,8 +34,7 @@ app.get('/insert', function (req, res, next) {
 			 	return;
 			 }
 			 context.workout = result.insertId; 
-			 //var output = JSON.stringify(result);
-			 //console.log('result=' + output);
+			 console.log("context.workout")
 			 res.render('worksql',context);
 		});
 });
