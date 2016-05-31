@@ -9,7 +9,7 @@ woContent.addEventListener("submit", function (e){
 
 	var req = new XMLHttpRequest();
 
-	var woParams ="Name"+woContent.elements.Name.value+
+	var woParams ="name"+woContent.elements.Name.value+
 						"&reps="+woContent.elements.Reps.value+
 						"&weight="+woContent.elements.Weight.value+
 						"&date="+woContent.elements.Date.value+
