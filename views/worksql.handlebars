@@ -2,9 +2,9 @@
 <h2>You have completed {{workoutnum}} exercizes.</h2>
 
 <!--<div id="form_post">-->
-<form action="/insert">
+<form action="/insert" id="woNew">
 	<label>Name:
-		<input type="text" name="woName" id="Name">
+		<input type="text" name="Name" id="Name">
 	</label>
 	
 	<label>Reps:
@@ -22,8 +22,7 @@
 	<label>Lbs:1, Kg:0
 		<input type="boolean" name="lbs" id="Lbs/Kg">
 	</label>
-	<input type="Submit" name="Submit" value="Submit">
-	<button onclick="wo.insert();">Add Session</button>
+	<input type="Submit" name="Submit" value="Add Session">
 </form>
 <!--</div>-->
 

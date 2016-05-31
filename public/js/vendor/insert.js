@@ -1,16 +1,24 @@
+var wocontent = document.getElementById(woNew)
 
-function Workout() {
+wocontent.addEventListener("submit", function (e){
+	e.preventDefault();
 
-	this.insert = function(){
-		var woContent = document.getElementById("Name").value;
-		woContent += ", " +document.getElementById("Reps").value;
-		woContent += ", " +document.getElementById("Weight").value;
-		woContent += ", " +document.getElementById("Date").value;
-		woContent += ", " +document.getElementById("Lbs/Kg").value;
+	var req = new XMLHttpRequest();
 
-		console.log(woContent);
-		
-	}
-}
+	var woParams ="Name"+wocontent.elements.name.value+
+						"&reps="+wocontent.elements.reps.value+
+						"&weight="+wocontent.elements.weight.value+
+						"&date="+wocontent.elements.date.value+
+						"&lbs="+wocontent.elements.lbs.value+
 
-var wo = new Workout();
+
+	req.open("GET", /insert + "?" +woParams, true);
+	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	req.addEventListener('load', function () {
+		 if(req.status >= 200 && req.status < 400){
+		 	console.log('request sent sucessfully');
+		 	var response = JSON.parse(req.responseText);
+		 	console.log(req.responseText)
+		 } 
+	})
+})

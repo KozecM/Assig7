@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3000);
+app.set('port', 3001);
 
 app.get('/', function (req, res, next) {
 	 var context = {};
@@ -20,16 +20,16 @@ app.get('/', function (req, res, next) {
 	 	}
 	 	context.results = JSON.stringify(rows);
 	 	res.render('worksql',context);
-	});
+	})
 });
 
 app.get('/insert', function (req, res, next) {
 	var context = {}; 
 
 	//console.log("req="+JSON.stringify(res));
-		console.log(req.query.woName);
+		console.log(req.query.Name);
 		var sql = "INSERT INTO workouts (`name`, `reps`, `weight`, `date`, `lbs`) VALUES(?, ?, ?, ?, ?)";
-		mysql.pool.query(sql,[req.query.woName, req.query.reps, req.query.weight, req.query.date, req.query.lbs], function (err,result){
+		mysql.pool.query(sql,[req.query.Name, req.query.reps, req.query.weight, req.query.date, req.query.lbs], function (err, row, result){
 			 if(err){
 			 	console.log('bummer');
 			 	next(err);
