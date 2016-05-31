@@ -38,10 +38,31 @@ woContent.addEventListener("submit", function (e){
 		 	console.log(ajaxTable);
 
 		 	var tableMaker = document.getElementById(ajxTbl);
+		 	tableMaker.style.display = '';
 		 	var newRow = tableMaker.insertRow(-1);
 
-		 	var Cells = [];
-		 	for()
+		 	var Cell = [];
+		 	for(var i=0; i<ajaxTable.length; i++){
+		 		Cell.push(document.createElement('td'));
+		 		Cell[i].textContent = ajaxTable[i];
+		 		newRow.appendChild(Cell[i]);
+		 	}
+
+		 	Cell[0].style.display = "none";
+
+		 	var updatebtn = '<input type="button" value="Update" onclick="updateRow('worktable',this,{{this.id}})">';
+		 	var deletebtn = '<input type="button" value="Delete" onclick="deleteRow('worktable',this,{{this.id}})"/>';
+
+		 	Cell.push(document.createElement('td'));
+		 	Cell[6].innerHTML = updatebtn;
+		 	newRow.appendChild(Cell[6]);
+
+		 	Cell.push(document.createElement('td'));
+		 	Cell[7].innerHTML = deletebtn;
+		 	newRow.appendChild(Cell[7]);
+
+		 	var serverTable = document.getElementById(worktable);
+		 	serverTable.style.display = 'none';
 		 } 
 		 else {
 		 	console.log("error happened");
