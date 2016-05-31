@@ -12,7 +12,7 @@ wocontent.addEventListener("submit", function (e){
 						"&lbs="+wocontent.elements.lbs.value+
 
 
-	req.open("GET", /insert + "?" +woParams, true);
+	req.open("GET", '/insert' + "?" +woParams, true);
 	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	req.addEventListener('load', function () {
 		 if(req.status >= 200 && req.status < 400){
@@ -25,5 +25,5 @@ wocontent.addEventListener("submit", function (e){
 		 	console.log("error happened");
 		 }
 	});
-	req.send(/insert+ "?"+ woParams);
+	req.send('/insert' + "?"+ woParams);
 });
