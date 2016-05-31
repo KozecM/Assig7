@@ -30,12 +30,18 @@ woContent.addEventListener("submit", function (e){
 		 if(req.status >= 200 && req.status < 400){
 		 	console.log('request sent sucessfully');
 		 	var response = req.response
-		 	console.log("here ", response)
+		 	console.log("here ", response.workouts)
 		 	var id = response.workouts;
 
 		 	ajaxTable.push(id, name, reps, weight, date, lbs);
 
 		 	console.log(ajaxTable);
+
+		 	var tableMaker = document.getElementById(ajxTbl);
+		 	var newRow = tableMaker.insertRow(-1);
+
+		 	var Cells = [];
+		 	for()
 		 } 
 		 else {
 		 	console.log("error happened");
