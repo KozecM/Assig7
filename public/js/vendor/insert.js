@@ -37,7 +37,7 @@ woContent.addEventListener("submit", function (e){
 
 		 	console.log(ajaxTable);
 
-		 	var tableMaker = document.getElementById(ajxTbl);
+		 	var tableMaker = document.getElementById('ajxTbl');
 		 	tableMaker.style.display = 'inherit' ;
 		 	var newRow = tableMaker.insertRow(-1);
 
@@ -61,7 +61,7 @@ woContent.addEventListener("submit", function (e){
 		 	Cell[7].innerHTML = deletebtn;
 		 	newRow.appendChild(Cell[7]);
 
-		 	var serverTable = document.getElementById(worktable);
+		 	var serverTable = document.getElementById('worktable');
 		 	serverTable.style.display = 'none';
 		 } 
 		 else {
