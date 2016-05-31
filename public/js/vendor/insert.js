@@ -1,4 +1,5 @@
 var woContent = document.getElementById("woNew");
+var count = 0;
 var ajaxTable = [];
 
 console.log(woContent)
@@ -31,14 +32,14 @@ woContent.addEventListener("submit", function (e){
 		 	console.log('request sent sucessfully');
 		 	var response = req.response
 		 	console.log("here ", response.workouts)
-		 	var id = response.workouts;
+		 	var id = count;
 
 		 	ajaxTable = [];
 		 	ajaxTable.push(id, name, reps, weight, date, lbs);
 
 		 	console.log(ajaxTable);
 
-		 	var tableMaker = document.getElementById('ajxTbl');
+		 	var tableMaker = document.getElementById('worktable');
 		 	tableMaker.style.display = 'inherit' ;
 		 	var newRow = tableMaker.insertRow(-1);
 
@@ -62,8 +63,35 @@ woContent.addEventListener("submit", function (e){
 		 	Cell[7].innerHTML = deletebtn;
 		 	newRow.appendChild(Cell[7]);
 
-		 	var serverTable = document.getElementById('worktable');
-		 	serverTable.style.display = 'none';
+		 	var theform = document.createElement('div');
+		 	theform.id = "ajaxupdate";
+		 	theform.style.display = 'none';
+		 	theform.innerHTML = "<div id=ajaxupdate style=\x27display: none\x27>\
+		<form>\
+			<label>Name:\
+				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27{{this.name}}\x27>\
+			</label>\
+	\
+			<label>Reps:\
+				<input type=\x27number\x27 name=\x27Reps\x27 id=\x27Reps\x27 value=\x27{{this.reps}}\x27>\
+			</label>\
+	\
+			<label>Weight:\
+				<input type\x27number\x27 name=\x27Weight\x27 id=\x27Weight\x27 value=\x27{{this.weight}}\x27>\
+			</label>\
+	\
+			<label>Date\
+				<input type=\x27date\x27 name=\x27Date\x27 id=\x27Date\x27 value=\x27{{this.date}}\x27>\
+			</label>\
+	\
+			<label>Lbs:1, Kg:0\
+				<input type=\x27boolean\x27 name=\x27Lbs\x27 id=\x27Lbs\x27 value=\x27{{this.lbs}}\x27>\
+			</label>\
+			<input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27>\
+		</form>\
+	</div>\ "
+
+		 	count++;
 		 } 
 		 else {
 		 	console.log("error happened");
