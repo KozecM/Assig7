@@ -1,7 +1,7 @@
 <h1>Your Workout Schedual</h1>
 <h2>You have completed {{workoutnum}} exercizes.</h2>
 
-<!--<div id="form_post">-->
+
 <form id="woNew" action="/insert" >
 	<fieldset>
 		<label>Name:
@@ -9,24 +9,23 @@
 		</label>
 	
 		<label>Reps:
-			<input type="number" name="reps" id="Reps">
+			<input type="number" name="Reps" id="Reps">
 		</label>
 	
 		<label>Weight:
-			<input type="number" name="weight" id="Weight">
+			<input type="number" name="Weight" id="Weight">
 		</label>
 	
 		<label>Date
-			<input type="date" name="date" id="Date">
+			<input type="date" name="Date" id="Date">
 		</label>
 	
 		<label>Lbs:1, Kg:0
-			<input type="boolean" name="lbs" id="Lbs/Kg">
+			<input type="boolean" name="Lbs" id="Lbs">
 		</label>
 		<input type="Submit" name="Submit" value="Add Session">
 	</fieldset>
 </form>
-<!--</div>-->
 
 {{#if workout}}
 <table id="worktable">
