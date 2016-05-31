@@ -22,7 +22,7 @@ woContent.addEventListener("submit", function (e){
 	req.addEventListener('load', function () {
 		 if(req.status >= 200 && req.status < 400){
 		 	console.log('request sent sucessfully');
-		 	var response = JSON.parse(req.responseText);
+		 	var response = req.responseText;
 		 	console.log(req.response)
 		 } 
 
