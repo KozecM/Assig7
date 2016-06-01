@@ -153,7 +153,7 @@ function update(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(document.querySelector('#Name').value);
+			console.log(document.getElementsByName(Name)[wID].value);
 			name=table.rows[i].cells[1];
 			name = name.Name;
 			console.log(name);
