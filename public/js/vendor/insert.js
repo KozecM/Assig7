@@ -155,8 +155,8 @@ function update(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(table.rows[i].Name);
-			name=table.rows[i].Name;
+			console.log(table.rows[i].cells.Name);
+			name=table.rows[i].cells.Name;
 			console.log(table.rows[i].Name);
 			name=table.rows[i].Name.value;
 
