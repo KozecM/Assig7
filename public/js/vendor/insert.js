@@ -66,7 +66,8 @@ woContent.addEventListener("submit", function (e){
 		 	theform.id = "ajaxupdate";
 		 	theform.display = 'none';
 		 	console.log(theform);
-		 	theform.appendChild ("<form>\
+		 	var fromcell = document.createElement('td')
+		 	formcell.innerHTML = "<form>\
 			<label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27{{this.name}}\x27>\
 			</label>\
@@ -87,9 +88,8 @@ woContent.addEventListener("submit", function (e){
 				<input type=\x27boolean\x27 name=\x27Lbs\x27 id=\x27Lbs\x27 value=\x27{{this.lbs}}\x27>\
 			</label>\
 			<input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27>\
-		</form>\
-	</div>\ ");
-
+		</form>\ "
+		 	theform.appendChild (formcell);
 		 	
 		 } 
 		 else {
