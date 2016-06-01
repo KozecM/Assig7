@@ -61,8 +61,7 @@ woContent.addEventListener("submit", function (e){
 		 	theform.id = "ajaxupdate";
 		 	theform.style.display = 'none';
 
-		 	theform.innerHTML = "<td><form></td>\
-			<td><label>Name:\
+		 	theform.innerHTML = "<td><label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27" + name +"\x27>\
 			</label></td>\
 	\
@@ -81,8 +80,7 @@ woContent.addEventListener("submit", function (e){
 			<td><label>Lbs:1, Kg:0\
 				<input type=\x27boolean\x27 name=\x27Lbs\x27 id=\x27Lbs\x27 value=\x27"+ lbs +"\x27>\
 			</label></td>\
-			<td><input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27></td>\
-		</form>\ "
+			<td><input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27></td>\ "
 		 	theform.appendChild (formcell);
 		 	
 		 } 
