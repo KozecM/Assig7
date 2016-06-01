@@ -149,5 +149,5 @@ function update(tableID, curRow, wID){
 
 	console.log(name)
 
-	req.open("GET", )
+	//req.open("GET", )
 }
