@@ -50,7 +50,7 @@ woContent.addEventListener("submit", function (e){
 		 		newRow.appendChild(Cell[i]);
 		 	}
 
-		 	Cell[0].style.display = "none";
+		 	//Cell[0].style.display = "none";
 
 		 	var updatebtn = '<input type="button" value="Update" onclick="updateRow(\x27ajxTbl\x27,this,{{this.id}})">';
 		 	var deletebtn = '<input type="button" value="Delete" onclick="deleteRow(\x27ajxTbl\x27,this,{{this.id}})"/>';
