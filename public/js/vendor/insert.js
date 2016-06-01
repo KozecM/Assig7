@@ -168,7 +168,7 @@ function update(tableID, curRow, wID){
 						"&lbs="+lbs;
 	console.log(woParams);
 
-	req.open("GET", '/update', "?" + woParams, true);
+	req.open("GET", '/update' + "?" + woParams, true);
 	console.log("opened");
 	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	console.log('still good?');
