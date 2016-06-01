@@ -65,7 +65,7 @@ app.get('/delete', function(req,res,next){
 	});
 });
 
-app.get('update', function (req, res, next) {
+app.get('/update', function (req, res, next) {
 	 var context = {};
 
 	 var sql = "SELECT * FROM workouts WHere id=?"
