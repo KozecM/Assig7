@@ -153,7 +153,7 @@ function update(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(document.getElementsByName(Name)[1].value);
+			console.log(document.querySelector(#ajaxupdate > td:nth-child(2) > label > input).value);
 			name=table.rows[i].cells[1];
 			name = name.Name;
 			console.log(name);
