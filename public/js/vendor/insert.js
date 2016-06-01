@@ -40,11 +40,8 @@ woContent.addEventListener("submit", function (e){
 
 		 	var tableMaker = document.getElementById('worktable');
 		 	tableMaker.style.display = 'inherit' ;
-		 	var thediv = document.createElement('div');
 		 	tableMaker.innerHTML = thediv;
-		 	thediv.id = serverTable;
-		 	var newRow = document.createElement('tr');
-		 	thediv.innerHTML = newRow;
+		 	var newRow = tableMaker.insertRow(-1);
 
 		 	var Cell = [];
 		 	for(var i=0; i<ajaxTable.length; i++){
@@ -66,10 +63,10 @@ woContent.addEventListener("submit", function (e){
 		 	Cell[7].innerHTML = deletebtn;
 		 	newRow.appendChild(Cell[7]);
 
-		 	var theform = document.createElement('div');
+		 	var theform = tableMaker.insertRow(-1);
 		 	theform.id = "ajaxupdate";
 		 	theform.style.display = 'none';
-		 	theform.innerHTML = "<div id=ajaxupdate style=\x27display: none\x27>\
+		 	theform.appendChild ("<div id=ajaxupdate style=\x27display: none\x27>\
 		<form>\
 			<label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27{{this.name}}\x27>\
@@ -92,7 +89,7 @@ woContent.addEventListener("submit", function (e){
 			</label>\
 			<input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27>\
 		</form>\
-	</div>\ "
+	</div>\ ");
 
 		 	
 		 } 
@@ -132,7 +129,6 @@ function updateRow(TableID, curRow, wID){
 
 	updater.addEventListener('submit', function (a) {
 		  a.preventDefault()
-
 	});
 
 }
