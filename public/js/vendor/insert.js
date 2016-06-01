@@ -30,7 +30,7 @@ woContent.addEventListener("submit", function (e){
 		 	var response = JSON.parse(req.response);
 		 	var id = response.workouts;
 
-		 	console.log(id);
+		 	console.log(response.workouts);
 
 		 	ajaxTable = [];
 		 	ajaxTable.push(id, name, reps, weight, date, lbs);
