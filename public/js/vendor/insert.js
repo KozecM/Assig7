@@ -141,9 +141,9 @@ function update(tableID, curRow, wID){
 
 	var req = new XMLHttpRequest();
 
-	console.log('made it to here');
+	console.log(document.getElementById(Name));
 
-	var name;
+	var name = document.getElementById(Name);
 	var reps;
 	var weight;
 	var date;
