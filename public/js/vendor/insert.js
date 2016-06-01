@@ -62,6 +62,7 @@ woContent.addEventListener("submit", function (e){
 		 	theform.style.display = 'none';
 
 		 	theform.innerHTML = "\
+		 	<td></td>\
 			<td><label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27" + name +"\x27>\
 			</label></td>\
@@ -127,7 +128,7 @@ function updateRow(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 			update.rows[i].style.display = 'none';
-			update.rows[i+1].style.display = 'initial';
+			update.rows[i+1].style.display = 'table-row';
 
 		}
 	}
