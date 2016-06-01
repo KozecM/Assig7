@@ -61,7 +61,7 @@ woContent.addEventListener("submit", function (e){
 		 	theform.id = "ajaxupdate";
 		 	theform.style.display = 'none';
 
-		 	theform.innerHTML = "<form>\
+		 	theform.innerHTML = "<td><form></td>\
 			<td><label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27" + name +"\x27>\
 			</label></td>\
