@@ -137,7 +137,7 @@ function updateRow(tableID, curRow, wID){
 
 function update(tableID, curRow, wID){
 	var table = document.getElementById(tableID);
-	var row = table.rows.length;
+	var rows = table.rows.length;
 
 	var req = new XMLHttpRequest();
 
