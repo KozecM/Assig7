@@ -141,14 +141,14 @@ function update(tableID, curRow, wID){
 
 	var req = new XMLHttpRequest();
 
-	console.log(document.getElementById(Name));
-
-	var name = document.getElementById(Name);
+	var name = document.getElementById(Name).value;
 	var reps;
 	var weight;
 	var date;
 	var lbs;
-
+	
+	console.log(name);
+	
 	for (var i = 0; i < rows; i++) {
 		var mainRow = table.rows[i];
 		console.log('still strong');
