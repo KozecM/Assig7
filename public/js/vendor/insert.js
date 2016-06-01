@@ -159,7 +159,7 @@ function update(tableID, curRow, wID){
 			weight =document.querySelector('#ajaxupdate > td:nth-child(4) > label > input').value;
 			date =document.querySelector('#ajaxupdate > td:nth-child(5) > label > input').value;			
 			lbs =document.querySelector('#ajaxupdate > td:nth-child(6) > label > input').value;
-			id =
+			
 		}
 	}
 	console.log('hello?');
