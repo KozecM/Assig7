@@ -169,6 +169,7 @@ function update(tableID, curRow, wID){
 	console.log(woParams);
 
 	req.open("GET", '/update', "?" + woParams, true);
+	console.log("opened");
 	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	req.addEventListener('load', function () {
 		if(req.status >= 200 && req.status < 400){
