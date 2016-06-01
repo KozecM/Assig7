@@ -153,7 +153,7 @@ function update(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(table.rows[i].cells[1].textContent);
+			console.log(table.rows[i].cells[1][2]);
 			name=table.rows[i].cells[1];
 			name = name.Name;
 			console.log(name);
