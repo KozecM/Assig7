@@ -65,9 +65,9 @@ woContent.addEventListener("submit", function (e){
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27" + name +"\x27>\
 			</td>\
 	\
-			<td><label>Reps:\
+			<td>\
 				<input type=\x27number\x27 name=\x27Reps\x27 id=\x27Reps\x27 value=\x27"+ reps +"\x27>\
-			</label></td>\
+			</td>\
 	\
 			<td><label>Weight:\
 				<input type\x27number\x27 name=\x27Weight\x27 id=\x27Weight\x27 value=\x27"+ weight +"\x27>\
