@@ -146,18 +146,20 @@ function update(tableID, curRow, wID){
 	var weight;
 	var date;
 	var lbs;
+	var id;
 	
 	for (var i = 0; i < rows; i++) {
 		var mainRow = table.rows[i];
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(document.querySelector('#ajaxupdate > td:nth-child(2) > label > input').value);
+			console.log(document.querySelector('#ajaxupdate > td:nth-child(6) > label > input').value);
 			name=document.querySelector('#ajaxupdate > td:nth-child(2) > label > input').value;
 			reps =document.querySelector('#ajaxupdate > td:nth-child(3) > label > input').value;
 			weight =document.querySelector('#ajaxupdate > td:nth-child(4) > label > input').value;
 			date =document.querySelector('#ajaxupdate > td:nth-child(5) > label > input').value;			
 			lbs =document.querySelector('#ajaxupdate > td:nth-child(6) > label > input').value;
+			id =
 		}
 	}
 	console.log('hello?');
