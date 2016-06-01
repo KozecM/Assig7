@@ -66,7 +66,7 @@ woContent.addEventListener("submit", function (e){
 		 	theform.id = "ajaxupdate";
 		 	theform.display = 'none';
 		 	console.log(theform);
-		 	var fromcell = document.createElement('td')
+		 	var formcell = document.createElement('td')
 		 	formcell.innerHTML = "<form>\
 			<label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27{{this.name}}\x27>\
@@ -121,8 +121,8 @@ function deleteRow(tableID, curRow, wID){
 }
 
 function updateRow(tableID, curRow, wID){
-	var updater = getElementById(ajaxupdate);
-	var information = getElementById(serverTable);
+	var updater = document.getElementById(ajaxupdate);
+	var information = document.getElementById(serverTable);
 
 	update.style.display = 'inherit';
 	information.style.display = 'none';
