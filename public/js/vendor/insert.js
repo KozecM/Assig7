@@ -61,26 +61,28 @@ woContent.addEventListener("submit", function (e){
 		 	theform.id = "ajaxupdate";
 		 	theform.style.display = 'none';
 
-		 	theform.innerHTML = "<td>\
+		 	theform.innerHTML = "<form>\
+			<label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27" + name +"\x27>\
-			</td>\
+			</label>\
 	\
-			<td>\
+			<label>Reps:\
 				<input type=\x27number\x27 name=\x27Reps\x27 id=\x27Reps\x27 value=\x27"+ reps +"\x27>\
-			</td>\
+			</label>\
 	\
-			<td><label>Weight:\
+			<label>Weight:\
 				<input type\x27number\x27 name=\x27Weight\x27 id=\x27Weight\x27 value=\x27"+ weight +"\x27>\
-			</label></td>\
+			</label>\
 	\
-			<td><label>Date\
+			<label>Date\
 				<input type=\x27date\x27 name=\x27Date\x27 id=\x27Date\x27 value=\x27"+ date +"\x27>\
-			</label></td>\
+			</label>\
 	\
-			<td><label>Lbs:1, Kg:0\
+			<label>Lbs:1, Kg:0\
 				<input type=\x27boolean\x27 name=\x27Lbs\x27 id=\x27Lbs\x27 value=\x27"+ lbs +"\x27>\
-			</label></td>\
-			<td><input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27></td>\ "
+			</label>\
+			<input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27>\
+		</form>\ "
 		 	theform.appendChild (formcell);
 		 	
 		 } 
@@ -127,7 +129,7 @@ function updateRow(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 			update.rows[i].style.display = 'none';
-			update.rows[i+1].style.display = 'inherit';
+			update.rows[i+1].style.display = 'initial';
 
 		}
 	}
