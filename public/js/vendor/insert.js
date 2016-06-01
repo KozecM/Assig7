@@ -30,13 +30,10 @@ woContent.addEventListener("submit", function (e){
 		 if(req.status >= 200 && req.status < 400){
 		 	console.log('request sent sucessfully');
 		 	var response = JSON.parse(req.response);
-		 	console.log("here ", response);
 		 	var id = response.workouts;
 
 		 	ajaxTable = [];
 		 	ajaxTable.push(id, name, reps, weight, date, lbs);
-
-		 	console.log(ajaxTable);
 
 		 	var tableMaker = document.getElementById('worktable');
 		 	tableMaker.style.display = 'inherit' ;
@@ -65,7 +62,7 @@ woContent.addEventListener("submit", function (e){
 		 	var theform = tableMaker.insertRow(-1);
 		 	theform.id = "ajaxupdate";
 		 	theform.display = 'none';
-		 	console.log(theform);
+
 		 	var formcell = document.createElement('td');
 		 	formcell.id = 'ajaxupdate';
 		 	formcell.style.display = 'none';
@@ -119,7 +116,13 @@ function deleteRow(tableID, curRow, wID){
 
 	req.send('/delete', "?id=" + wID);
 
-	table.rows[wID].style.display ='none';
+	for (var i = 0; i <= rows; i++) {
+		var mainRow = table.rows[i];
+
+		if(mainRow == curRow.parentNode.parentNode){
+			table.deleteRow(i);
+		}
+	}
 }
 
 function updateRow(tableID, curRow, wID){
