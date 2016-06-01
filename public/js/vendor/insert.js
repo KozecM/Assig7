@@ -167,7 +167,8 @@ function update(tableID, curRow, wID){
 						"&reps="+reps+
 						"&weight="+weight+
 						"&date="+date+
-						"&lbs="+lbs;
+						"&lbs="+lbs+
+						"&id="+id;
 	console.log(woParams);
 
 	req.open("GET", '/update' + "?" + woParams, true);
