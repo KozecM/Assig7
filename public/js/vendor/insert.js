@@ -153,8 +153,10 @@ function update(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(table.rows[i].cells[1].label);
-			name=table.rows[i].cells[1].value;
+			console.log(table.rows[i].cells[1]);
+			name=table.rows[i].cells[1];
+			name = name.Name;
+			console.log(name);
 			reps =table.rows[i].cells[2].Reps;
 			weight =table.rows[i].cells[3].Weight.value;
 			date =table.rows[i].cells[4].Date.value;			
