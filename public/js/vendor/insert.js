@@ -40,7 +40,6 @@ woContent.addEventListener("submit", function (e){
 
 		 	var tableMaker = document.getElementById('worktable');
 		 	tableMaker.style.display = 'inherit' ;
-		 	tableMaker.innerHTML = thediv;
 		 	var newRow = tableMaker.insertRow(-1);
 
 		 	var Cell = [];
@@ -65,9 +64,8 @@ woContent.addEventListener("submit", function (e){
 
 		 	var theform = tableMaker.insertRow(-1);
 		 	theform.id = "ajaxupdate";
-		 	theform.style.display = 'none';
-		 	theform.appendChild ("<div id=ajaxupdate style=\x27display: none\x27>\
-		<form>\
+		 	theform.style.display = "none";
+		 	theform.appendChild ("<form>\
 			<label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27{{this.name}}\x27>\
 			</label>\
