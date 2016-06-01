@@ -64,7 +64,7 @@ woContent.addEventListener("submit", function (e){
 
 		 	var theform = tableMaker.insertRow(-1);
 		 	theform.id = "ajaxupdate";
-		 	theform.hidden = "true";
+		 	theform.display = 'none';
 		 	console.log(theform);
 		 	theform.appendChild ("<form>\
 			<label>Name:\
@@ -120,11 +120,12 @@ function deleteRow(tableID, curRow, wID){
 	table.rows[wID].style.display ='none';
 }
 
-function updateRow(TableID, curRow, wID){
-	var dissapear = document.getElementById(serverTable)
-	var updater = document.getElementById(ajaxupdate);
-	updater.style.display = 'inherit';
-	dissapear.style.display = 'inherit';
+function updateRow(tableID, curRow, wID){
+	var updater = getElementById(ajaxupdate);
+	var information = getElementById(serverTable);
+
+	update.style.display = 'inherit';
+	information.style.display = 'none';
 
 	updater.addEventListener('submit', function (a) {
 		  a.preventDefault()
