@@ -1,5 +1,4 @@
 var woContent = document.getElementById("woNew");
-var count = 0;
 var ajaxTable = [];
 
 console.log(woContent)
@@ -30,9 +29,9 @@ woContent.addEventListener("submit", function (e){
 	req.addEventListener('load', function () {
 		 if(req.status >= 200 && req.status < 400){
 		 	console.log('request sent sucessfully');
-		 	var response = req.response
-		 	console.log("here ", response)
-		 	var id = count++;
+		 	var response = JSON.parse(req.response);
+		 	console.log("here ", response);
+		 	var id = response.workouts;
 
 		 	ajaxTable = [];
 		 	ajaxTable.push(id, name, reps, weight, date, lbs);
@@ -41,7 +40,10 @@ woContent.addEventListener("submit", function (e){
 
 		 	var tableMaker = document.getElementById('worktable');
 		 	tableMaker.style.display = 'inherit' ;
-		 	var newRow = tableMaker.insertRow(-1);
+		 	var thediv = document.createElement('div');
+		 	tableMaker.innerHTML = thediv;
+		 	thediv.id = serverTable;
+		 	var newRow = thediv.insertRow(-1);
 
 		 	var Cell = [];
 		 	for(var i=0; i<ajaxTable.length; i++){
@@ -122,5 +124,14 @@ function deleteRow(tableID, curRow, wID){
 }
 
 function updateRow(TableID, curRow, wID){
+	var dissapear = document.getElementById(serverTable)
+	var updater = document.getElementById(ajaxupdate);
+	updater.style.display = 'inherit';
+	dissapear.style.display = 'inherit';
+
+	updater.addEventListener('submit', function (a) {
+		  a.preventDefault()
+		  
+	});
 
 }
