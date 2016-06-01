@@ -141,13 +141,11 @@ function update(tableID, curRow, wID){
 
 	var req = new XMLHttpRequest();
 
-	var name = table.getElementById(Name).value;
+	var name;
 	var reps;
 	var weight;
 	var date;
 	var lbs;
-	
-	console.log(name);
 	
 	for (var i = 0; i < rows; i++) {
 		var mainRow = table.rows[i];
@@ -155,7 +153,7 @@ function update(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(table.rows[i].cells[1].lname);
+			console.log(table.rows[i].cells[1].innerHTML.value);
 			name=table.rows[i].cells[1].value;
 			reps =table.rows[i].cells[2].Reps;
 			weight =table.rows[i].cells[3].Weight.value;
