@@ -154,13 +154,11 @@ function update(tableID, curRow, wID){
 		if(mainRow == curRow.parentNode.parentNode){
 
 			console.log(document.querySelector('#ajaxupdate > td:nth-child(2) > label > input').value);
-			name=table.rows[i].cells[1];
-			name = name.Name;
-			console.log(name);
-			reps =table.rows[i].cells[2].Reps;
-			weight =table.rows[i].cells[3].Weight.value;
-			date =table.rows[i].cells[4].Date.value;			
-			lbs =table.rows[i].cells[5].Lbs.value;
+			name=document.querySelector('#ajaxupdate > td:nth-child(2) > label > input').value;
+			reps =document.querySelector('#ajaxupdate > td:nth-child(3) > label > input').value;
+			weight =document.querySelector('#ajaxupdate > td:nth-child(4) > label > input').value;
+			date =document.querySelector('#ajaxupdate > td:nth-child(5) > label > input').value;			
+			lbs =document.querySelector('#ajaxupdate > td:nth-child(6) > label > input').value;
 		}
 	}
 
