@@ -1,8 +1,6 @@
 var woContent = document.getElementById("woNew");
 var ajaxTable = [];
 
-console.log(woContent)
-
 woContent.addEventListener("submit", function (e){
 	e.preventDefault();
 
@@ -127,12 +125,16 @@ function deleteRow(tableID, curRow, wID){
 
 function updateRow(tableID, curRow, wID){
 	var update = document.getElementById(tableID);
+	var rows = update.rows.length;
 
-	update.elements.ajaxupdate.style.display = 'inherit';
-	update.elements.serverTable.style.display = 'none';
+	for (var i = 0; i < rows; i++) {
+		var mainRow = update.rows[i];
 
-	updater.addEventListener('submit', function (a) {
-		  a.preventDefault()
-	});
+		if(mainRow == curRow.parentNode.parentNode){
+			update.rows[i].style.display = 'none';
+			update.rows[i+1].style.display = 'inherit';
+
+		}
+	}
 
 }
