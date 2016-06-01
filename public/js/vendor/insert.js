@@ -161,7 +161,7 @@ function update(tableID, curRow, wID){
 			lbs =document.querySelector('#ajaxupdate > td:nth-child(6) > label > input').value;
 		}
 	}
-
+	console.log('hello?');
 	var woParams ="name="+name+
 						"&reps="+reps+
 						"&weight="+weight+
@@ -187,10 +187,12 @@ function update(tableID, curRow, wID){
 					table.rows[i-1].Weight.textContent = weight;
 					table.rows[i-1].Date.textContent = date;
 					table.rows[i-1].Lbs.textContent = lbs;	
-					update.rows[i].style.display = 'none';
-					update.rows[i-1].style.display = 'table-row';		
+					table.rows[i].style.display = 'none';
+					table.rows[i-1].style.display = 'table-row';
 				}
 			}
+
+
 
 		} else {
 			console.log("error happened");
