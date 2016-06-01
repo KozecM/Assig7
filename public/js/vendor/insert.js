@@ -149,7 +149,6 @@ function update(tableID, curRow, wID){
 	
 	for (var i = 0; i < rows; i++) {
 		var mainRow = table.rows[i];
-		console.log('still strong');
 
 		if(mainRow == curRow.parentNode.parentNode){
 
@@ -167,6 +166,7 @@ function update(tableID, curRow, wID){
 						"&weight="+weight+
 						"&date="+date+
 						"&lbs="+lbs;
+	console.log(woParams);
 
 	req.open("GET", '/update', "?" + woParams, true);
 	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
@@ -188,7 +188,7 @@ function update(tableID, curRow, wID){
 					table.rows[i-1].Date.textContent = date;
 					table.rows[i-1].Lbs.textContent = lbs;	
 					table.rows[i].style.display = 'none';
-					table.rows[i-1].style.display = 'table-row';
+					table.rows[i-1].style.display = 'initial';
 				}
 			}
 
