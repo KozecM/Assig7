@@ -69,23 +69,23 @@ woContent.addEventListener("submit", function (e){
 		 	var formcell = document.createElement('td')
 		 	formcell.innerHTML = "<form>\
 			<label>Name:\
-				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27{{this.name}}\x27>\
+				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27" + name +"\x27>\
 			</label>\
 	\
 			<label>Reps:\
-				<input type=\x27number\x27 name=\x27Reps\x27 id=\x27Reps\x27 value=\x27{{this.reps}}\x27>\
+				<input type=\x27number\x27 name=\x27Reps\x27 id=\x27Reps\x27 value=\x27"+ reps +"\x27>\
 			</label>\
 	\
 			<label>Weight:\
-				<input type\x27number\x27 name=\x27Weight\x27 id=\x27Weight\x27 value=\x27{{this.weight}}\x27>\
+				<input type\x27number\x27 name=\x27Weight\x27 id=\x27Weight\x27 value=\x27"+ weight +"\x27>\
 			</label>\
 	\
 			<label>Date\
-				<input type=\x27date\x27 name=\x27Date\x27 id=\x27Date\x27 value=\x27{{this.date}}\x27>\
+				<input type=\x27date\x27 name=\x27Date\x27 id=\x27Date\x27 value=\x27"+ date +"\x27>\
 			</label>\
 	\
 			<label>Lbs:1, Kg:0\
-				<input type=\x27boolean\x27 name=\x27Lbs\x27 id=\x27Lbs\x27 value=\x27{{this.lbs}}\x27>\
+				<input type=\x27boolean\x27 name=\x27Lbs\x27 id=\x27Lbs\x27 value=\x27"+ lbs +"\x27>\
 			</label>\
 			<input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27>\
 		</form>\ "
@@ -121,7 +121,7 @@ function deleteRow(tableID, curRow, wID){
 }
 
 function updateRow(tableID, curRow, wID){
-	var updater = document.getElementById(ajaxupdate);
+	var update = document.getElementById(ajaxupdate);
 	var information = document.getElementById(serverTable);
 
 	update.style.display = 'inherit';
