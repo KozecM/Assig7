@@ -126,10 +126,10 @@ function deleteRow(tableID, curRow, wID){
 }
 
 function updateRow(tableID, curRow, wID){
-	var update = document.getElementById(ajaxupdate);
+	var update = document.getElementById(tableID);
 	var information = document.getElementById(serverTable);
 
-	update.style.display = 'inherit';
+	update.elements.ajaxupdate.style.display = 'inherit';
 	information.style.display = 'none';
 
 	updater.addEventListener('submit', function (a) {
