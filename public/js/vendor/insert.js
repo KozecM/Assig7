@@ -59,7 +59,7 @@ woContent.addEventListener("submit", function (e){
 
 		 	var theform = tableMaker.insertRow(-1);
 		 	theform.id = "ajaxupdate";
-		 	theform.display = 'none';
+		 	theform.style.display = 'none';
 
 		 	theform.innerHTML = "<form>\
 			<label>Name:\
