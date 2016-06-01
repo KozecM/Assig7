@@ -82,7 +82,7 @@ woContent.addEventListener("submit", function (e){
 			<td><label>Lbs:1, Kg:0\
 				<input type=\x27boolean\x27 name=\x27Lbs\x27 id=\x27Lbs\x27 value=\x27"+ lbs +"\x27>\
 			</label></td>\
-			<td><input type=\x27Submit\x27 name=\x27Submit\x27 value=\x27Update\x27></td>\ "
+			<td><input type=\x27button\x27 value=\x27Update\x27 onclick=\x27updateRow(\x27worktable\x27,this,"+ id +")\x27></td>\ "
 		 	
 		 } 
 		 else {
@@ -133,4 +133,21 @@ function updateRow(tableID, curRow, wID){
 		}
 	}
 
+}
+
+function update(tableID, curRow, wID){
+	var table = document.getElementById(tableID);
+	var row = table.rows.length;
+
+	var req = new XMLHttpRequest();
+
+	var name = document.getElementById(Name);
+	var reps = document.getElementById(Reps);
+	var weight = document.getElementById(Weight);
+	var date = document.getElementById(Date);
+	var lbs = document.getElementById(Lbs);	
+
+	console.log(name)
+
+	req.open("GET", )
 }

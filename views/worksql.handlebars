@@ -49,27 +49,26 @@
 		<td><input type="button" value="Delete" onclick="deleteRow('worktable',this,{{this.id}})"/></td>
 	</tr>
 	<tr id="ajaxupdate" style="display:none">
-		<td><form>
-			<label>Name:
+		<td><label>Name:
 				<input type="text" name="Name" id="Name" value="{{this.name}}">
-			</label>
+			</label></td>
 	
-			<label>Reps:
+			<td><label>Reps:
 				<input type="number" name="Reps" id="Reps" value="{{this.reps}}">
-			</label>
+			</label></td>
 	
-			<label>Weight:
+			<td><label>Weight:
 				<input type="number" name="Weight" id="Weight" value="{{this.weight}}">
-			</label>
+			</label></td>
 	
-			<label>Date
+			<td><label>Date
 				<input type="date" name="Date" id="Date" value="{{this.date}}">
-			</label>
+			</label></td>
 	
-			<label>Lbs:1, Kg:0
+			<td><label>Lbs:1, Kg:0
 				<input type="boolean" name="Lbs" id="Lbs" value="{{this.lbs}}">
-			</label>
-			<input type="Submit" name="Submit" value="Update">
+			</label></td>
+			<td><input type="button" id="update" value="Update" onclick="updateRow('worktable',this,{{this.id}})"/></td>
 		</form></td>
 	</tr>
 	
