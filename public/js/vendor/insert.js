@@ -171,7 +171,9 @@ function update(tableID, curRow, wID){
 	req.open("GET", '/update', "?" + woParams, true);
 	console.log("opened");
 	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	console.log('still good?');
 	req.addEventListener('load', function () {
+		console.log('?');
 		if(req.status >= 200 && req.status < 400){
 			console.log('update sent successfully');
 
