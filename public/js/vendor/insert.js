@@ -82,7 +82,7 @@ woContent.addEventListener("submit", function (e){
 			<td><label>Lbs:1, Kg:0\
 				<input type=\x27boolean\x27 name=\x27Lbs\x27 id=\x27Lbs\x27 value=\x27"+ lbs +"\x27>\
 			</label></td>\
-			<td><input type=\x27button\x27 value=\x27Update\x27 onclick=\x27updateRow(\x27worktable\x27,this,"+ id +")\x27></td>\ "
+			<td><input type=\x27button\x27 value=\x27Update\x27 onclick=\x22updateRow(\x27worktable\x27,this,"+ id +")\x22></td>\ "
 		 	
 		 } 
 		 else {
