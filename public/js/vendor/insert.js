@@ -43,7 +43,8 @@ woContent.addEventListener("submit", function (e){
 		 	var thediv = document.createElement('div');
 		 	tableMaker.innerHTML = thediv;
 		 	thediv.id = serverTable;
-		 	var newRow = thediv.insertRow(-1);
+		 	var newRow = document.createElement('tr');
+		 	thediv.innerHTML = newRow;
 
 		 	var Cell = [];
 		 	for(var i=0; i<ajaxTable.length; i++){
@@ -131,7 +132,7 @@ function updateRow(TableID, curRow, wID){
 
 	updater.addEventListener('submit', function (a) {
 		  a.preventDefault()
-		  
+
 	});
 
 }
