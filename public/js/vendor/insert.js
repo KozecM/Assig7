@@ -62,7 +62,7 @@ woContent.addEventListener("submit", function (e){
 		 	theform.style.display = 'none';
 
 		 	theform.innerHTML = "\
-		 	<td></td>\
+		 	<td>"+ id +"</td>\
 			<td><label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27" + name +"\x27>\
 			</label></td>\
