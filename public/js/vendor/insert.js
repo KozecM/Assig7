@@ -201,5 +201,5 @@ function update(tableID, curRow, wID){
 			console.log("error happened");
 		}
 	});
-
+	req.send('/update' + "?" + woParams);
 }
