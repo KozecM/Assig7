@@ -18,7 +18,7 @@ woContent.addEventListener("submit", function (e){
 						"&reps="+reps+
 						"&weight="+weight+
 						"&date="+date+
-						"&lbs="+lbs+
+						"&lbs="+lbs;
 
 	console.log(woParams);
 
@@ -141,13 +141,57 @@ function update(tableID, curRow, wID){
 
 	var req = new XMLHttpRequest();
 
-	var name = document.getElementById(Name);
-	var reps = document.getElementById(Reps);
-	var weight = document.getElementById(Weight);
-	var date = document.getElementById(Date);
-	var lbs = document.getElementById(Lbs);	
+	var name;
+	var reps;
+	var weight;
+	var date;
+	var lbs;
 
-	console.log(name)
+	for (var i = 0; i < rows; i++) {
+		var mainRow = table.rows[i];
 
-	//req.open("GET", )
+		if(mainRow == curRow.parentNode.parentNode){
+			name=table.rows[i].Name.value
+			reps =table.rows[i].Reps.value;
+			weight =table.rows[i].Weight.value;
+			date =table.rows[i].Date.value;			
+			lbs =table.rows[i].Lbs.value;
+		}
+	}
+
+	var woParams ="name="+name+
+						"&reps="+reps+
+						"&weight="+weight+
+						"&date="+date+
+						"&lbs="+lbs;
+
+	req.open("GET", '/update', "?" + woParams, true);
+	req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	req.addEventListener('load', function () {
+		if(req.status >= 200 && req.status < 400){
+			console.log('update sent successfully');
+
+			var updatetbl = [];
+
+			updatetbl.push(name, reps, weight, date, lbs);
+
+			for (var i = 0; i < rows; i++) {
+				var mainRow = table.rows[i];
+
+				if(mainRow == curRow.parentNode.parentNode){
+					table.rows[i-1].Name.textContent = name;
+					table.rows[i-1].Reps.textContent = reps;
+					table.rows[i-1].Weight.textContent = weight;
+					table.rows[i-1].Date.textContent = date;
+					table.rows[i-1].Lbs.textContent = lbs;	
+					update.rows[i].style.display = 'none';
+					update.rows[i-1].style.display = 'table-row';		
+				}
+			}
+
+		} else {
+			console.log("error happened");
+		}
+	});
+
 }
