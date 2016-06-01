@@ -155,7 +155,7 @@ function update(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(table.rows[i].cells[1]);
+			console.log(table.rows[i].cells[1].lname);
 			name=table.rows[i].cells[1].value;
 			reps =table.rows[i].cells[2].Reps;
 			weight =table.rows[i].cells[3].Weight.value;
