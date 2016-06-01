@@ -141,6 +141,8 @@ function update(tableID, curRow, wID){
 
 	var req = new XMLHttpRequest();
 
+	console.log('made it to here');
+
 	var name;
 	var reps;
 	var weight;
@@ -149,6 +151,7 @@ function update(tableID, curRow, wID){
 
 	for (var i = 0; i < rows; i++) {
 		var mainRow = table.rows[i];
+		console.log('still strong');
 
 		if(mainRow == curRow.parentNode.parentNode){
 
