@@ -8,7 +8,7 @@ html{
 	background-color: lightgrey;
 }
 
-table,
+tr,
 td,
 th{
 	outline-style: solid;
