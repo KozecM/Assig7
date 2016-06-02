@@ -105,7 +105,7 @@ app.get('/update', function (req, res, next) {
 	 		
 	 	}
 	});
-}
+});
 
 app.get('/reset-table',function(req,res,next){
   var context = {};
