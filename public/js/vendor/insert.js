@@ -165,12 +165,12 @@ function update(tableID, curRow, wID){
 		}
 	}
 	console.log('hello?');
-	var woParams ="name="+name+
+	var woParams = "id="+id+
+						"&name="+name+
 						"&reps="+reps+
 						"&weight="+weight+
-						"&date="+date+
-						"&lbs="+lbs+
-						"&id="+id;
+						"&1date="+date+
+						"&lbs="+lbs+;
 	console.log(woParams);
 
 	req.open("GET", '/update' + "?" + woParams, true);
