@@ -143,26 +143,25 @@ function update(tableID, curRow, wID){
 
 	var req = new XMLHttpRequest();
 
-	var identifier = "ajaxupdate"+id;
+	var identifier = "ajaxupdate"+wID;
 	var name;
 	var reps;
 	var weight;
 	var date;
 	var lbs;
-	var id;
+	var id=wID;
 	
 	for (var i = 0; i < rows; i++) {
 		var mainRow = table.rows[i];
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(document.querySelector('#'+identifier+' > td:nth-child(1)').textContent);
+			console.log(document.getElementById(identifier));
 			name=document.querySelector('#'+identifier+' > td:nth-child(2) > label > input').value;
 			reps =document.querySelector('#'+identifier+' > td:nth-child(3) > label > input').value;
 			weight =document.querySelector('#'+identifier+' > td:nth-child(4) > label > input').value;
 			date =document.querySelector('#'+identifier+' > td:nth-child(5) > label > input').value;			
 			lbs =document.querySelector('#'+identifier+' > td:nth-child(6) > label > input').value;
-			id =document.querySelector('#'+identifier+' > td:nth-child(1)').textContent;
 		}
 	}
 	console.log('hello?');
