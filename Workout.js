@@ -100,10 +100,11 @@ app.get('/update', function (req, res, next) {
 		 			context.workoutnum = workTable.length;
 			 		context.workout= rows;
 		 			res.render('worksql',context);
-		 			}
-	 			});
+		 			});
+	 			
 	 		
-	 });
+	 	}
+	});
 }
 
 app.get('/reset-table',function(req,res,next){
