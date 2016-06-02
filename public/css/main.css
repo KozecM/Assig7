@@ -1,0 +1,12 @@
+h1 {
+	color: green;
+}
+
+table{
+	outline-style: solid;
+}
+
+td{
+	outline-style: solid;
+	outline-color: green;
+}
