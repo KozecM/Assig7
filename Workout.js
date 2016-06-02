@@ -61,7 +61,15 @@ app.get('/delete', function(req,res,next){
 		 		next(err);
 		 		return;
 		 	}
-		 }); 
+		 	var workTable = [];
+
+	 		for(var i in rows){
+	 			workTable.push(rows[i]);
+	 		}
+	 		context.workoutnum = workTable.length;
+	 		context.workout= rows;
+	 		res.render('worksql',context);
+		}); 
 	});
 });
 
@@ -84,7 +92,7 @@ app.get('/update', function (req, res, next) {
 	 				 	next(err);
 	 				 	return;
 	 				 }
-	 				 var workTable = [];
+	 				var workTable = [];
 
 			 		for(var i in rows){
 			 			workTable.push(rows[i]);
@@ -95,8 +103,8 @@ app.get('/update', function (req, res, next) {
 		 			}
 	 			});
 	 		
-	 }) 
-})
+	 });
+}
 
 app.get('/reset-table',function(req,res,next){
   var context = {};
