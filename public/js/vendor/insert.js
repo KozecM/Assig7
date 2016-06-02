@@ -196,7 +196,7 @@ function update(tableID, curRow, wID){
 					table.rows[i-1].cells[4].textContent = date;
 					table.rows[i-1].cells[5].textContent = lbs;	
 					table.rows[i].style.display = 'none';
-					table.rows[i-1].style.display = 'initial';
+					table.rows[i-1].style.display = 'table-row';
 				}
 			}
 
