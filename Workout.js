@@ -78,15 +78,23 @@ app.get('/update', function (req, res, next) {
 	 	if (result.length == 1) {
 	 		var curVals = result[0];
 	 		sql = "UPDATE workouts SET name=?, reps=?, weight=?, date=?, lbs=? WHERE id=?"
-
 	 		mysql.pool.query(sql, [req.query.name || curVals.name, req.query.reps || curVals.reps, req.query.weight || curVals.weight, req.query.date || curVals.date, req.query.lbs || curVals.lbs, req.query.id],
-	 			function (err, result) {
+	 			function (err, rows, fields) {
 	 				 if (err) {
 	 				 	next(err);
 	 				 	return;
 	 				 }
-	 			})
-	 	}
+	 				 var workTable = [];
+
+			 		for(var i in rows){
+			 			workTable.push(rows[i]);
+		 			}
+		 			context.workoutnum = workTable.length;
+			 		context.workout= rows;
+		 			res.render('worksql',context);
+		 			}
+	 			});
+	 		
 	 }) 
 })
 
