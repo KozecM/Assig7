@@ -39,7 +39,9 @@ app.get('/insert', function (req, res, next) {
 			 	next(err);
 			 	return;
 			 }
-			 context.workout = JSON.parse(result.insertId); 
+			 context.workout = result.insertId;
+
+			 console.log(context.workout); 
 			 res.json(context);
 		});
 });
@@ -59,8 +61,6 @@ app.get('/delete', function(req,res,next){
 		 		next(err);
 		 		return;
 		 	}
-		 	context.workout = JSON.stringify(rows);
-		 	res.render('worksql', context);
 		 }); 
 	});
 });
