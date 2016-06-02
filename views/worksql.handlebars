@@ -39,7 +39,7 @@
 	</tr>
 	{{#each workout}}
 	<tr id="serverTable">
-		<td /*style = "display:none"*/>{{this.id}}</td>
+		<td style = "display:none">{{this.id}}</td>
 		<td>{{this.name}}</td>
 		<td>{{this.reps}}</td>
 		<td>{{this.weight}}</td>
@@ -49,7 +49,7 @@
 		<td><input type="button" value="Delete" onclick="deleteRow('worktable',this,{{this.id}})"/></td>
 	</tr>
 	<tr id="ajaxupdate{{this.id}}" style="display:none">
-			<td>{{this.id}}</td>
+			<td style = "display:none">{{this.id}}</td>
 			<td><label>Name:
 				<input type="text" name="Name" id="Name" value="{{this.name}}">
 			</label></td>

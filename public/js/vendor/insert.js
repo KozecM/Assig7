@@ -46,7 +46,7 @@ woContent.addEventListener("submit", function (e){
 		 		newRow.appendChild(Cell[i]);
 		 	}
 
-		 	//Cell[0].style.display = "none";
+		 	Cell[0].style.display = "none";
 
 		 	var updatebtn = '<input type="button" value="Update" onclick="updateRow(\x27worktable\x27,this,'+ id +')">';
 		 	var deletebtn = '<input type="button" value="Delete" onclick="deleteRow(\x27worktable\x27,this,'+ id +')"/>';
@@ -64,7 +64,7 @@ woContent.addEventListener("submit", function (e){
 		 	theform.style.display = 'none';
 
 		 	theform.innerHTML = "\
-		 	<td>"+ id +"</td>\
+		 	<td style = \x27display:none\x27>"+ id +"</td>\
 			<td><label>Name:\
 				<input type=\x27text\x27 name=\x27Name\x27 id=\x27Name\x27 value=\x27" + name +"\x27>\
 			</label></td>\
