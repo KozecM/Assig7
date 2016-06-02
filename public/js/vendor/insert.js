@@ -190,11 +190,11 @@ function update(tableID, curRow, wID){
 				var mainRow = table.rows[i];
 
 				if(mainRow == curRow.parentNode.parentNode){
-					table.rows[i-1].Name.textContent = name;
-					table.rows[i-1].Reps.textContent = reps;
-					table.rows[i-1].Weight.textContent = weight;
-					table.rows[i-1].Date.textContent = date;
-					table.rows[i-1].Lbs.textContent = lbs;	
+					table.rows[i-1].cells[1].textContent = name;
+					table.rows[i-1].cells[2].textContent = reps;
+					table.rows[i-1].cells[3].textContent = weight;
+					table.rows[i-1].cells[4].textContent = date;
+					table.rows[i-1].cells[5].textContent = lbs;	
 					table.rows[i].style.display = 'none';
 					table.rows[i-1].style.display = 'initial';
 				}
