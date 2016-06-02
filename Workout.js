@@ -42,7 +42,7 @@ app.get('/insert', function (req, res, next) {
 			 context.workout = result.insertId;
 
 			 console.log(context.workout); 
-			 res.json(context);
+			 res.send(JSON.stringify(context));
 		});
 });
 
