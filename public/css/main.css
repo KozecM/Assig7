@@ -1,6 +1,7 @@
 h1 {
-	color: green;
+	color: white;
 	background-color: darkgreen;
+	border-radius: 10px;
 }
 
 table,
