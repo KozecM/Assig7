@@ -2,8 +2,10 @@ h1 {
 	color: green;
 }
 
+table,
 td,
 th{
 	outline-style: solid;
 	outline-color: green;
+	padding: 5px;
 }
