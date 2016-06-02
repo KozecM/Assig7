@@ -60,7 +60,7 @@ woContent.addEventListener("submit", function (e){
 		 	newRow.appendChild(Cell[7]);
 
 		 	var theform = tableMaker.insertRow(-1);
-		 	theform.id = "ajaxupdate";
+		 	theform.id = "ajaxupdate"+id;
 		 	theform.style.display = 'none';
 
 		 	theform.innerHTML = "\
@@ -143,6 +143,7 @@ function update(tableID, curRow, wID){
 
 	var req = new XMLHttpRequest();
 
+	var identifier = "ajaxupdate"+id;
 	var name;
 	var reps;
 	var weight;
@@ -155,13 +156,13 @@ function update(tableID, curRow, wID){
 
 		if(mainRow == curRow.parentNode.parentNode){
 
-			console.log(document.querySelector('#ajaxupdate > td:nth-child(1)').textContent);
-			name=document.querySelector('#ajaxupdate > td:nth-child(2) > label > input').value;
-			reps =document.querySelector('#ajaxupdate > td:nth-child(3) > label > input').value;
-			weight =document.querySelector('#ajaxupdate > td:nth-child(4) > label > input').value;
-			date =document.querySelector('#ajaxupdate > td:nth-child(5) > label > input').value;			
-			lbs =document.querySelector('#ajaxupdate > td:nth-child(6) > label > input').value;
-			id =document.querySelector('#ajaxupdate > td:nth-child(1)').textContent;
+			console.log(document.querySelector('#'+identifier+' > td:nth-child(1)').textContent);
+			name=document.querySelector('#'+identifier+' > td:nth-child(2) > label > input').value;
+			reps =document.querySelector('#'+identifier+' > td:nth-child(3) > label > input').value;
+			weight =document.querySelector('#'+identifier+' > td:nth-child(4) > label > input').value;
+			date =document.querySelector('#'+identifier+' > td:nth-child(5) > label > input').value;			
+			lbs =document.querySelector('#'+identifier+' > td:nth-child(6) > label > input').value;
+			id =document.querySelector('#'+identifier+' > td:nth-child(1)').textContent;
 		}
 	}
 	console.log('hello?');
